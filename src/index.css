@@ -474,23 +474,20 @@ button {
     top: 0;
   }
   .top-bar-inner {
-    gap: 6px;
+    gap: 4px;
   }
   .top-bar-left {
-    gap: 6px;
+    gap: 4px;
     flex-wrap: nowrap;
     overflow: hidden;
   }
   .top-bar-item {
-    font-size: 10.5px;
-    gap: 4px;
+    font-size: 9.5px;
+    gap: 3px;
     min-width: 0;
   }
   .top-bar-item span {
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 110px;
   }
   .top-bar-item svg {
     flex-shrink: 0;
@@ -499,7 +496,7 @@ button {
   }
   .top-bar-divider {
     flex-shrink: 0;
-    font-size: 10px;
+    font-size: 9px;
   }
   .top-bar-social {
     width: 22px;
@@ -523,9 +520,6 @@ button {
   .top-bar-divider,
   .top-bar-left .top-bar-item:last-of-type {
     display: none;
-  }
-  .top-bar-item span {
-    max-width: 140px;
   }
 }
 
