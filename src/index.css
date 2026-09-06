@@ -3208,6 +3208,12 @@ h2 span {
     padding-top: 162px; /* 36px topbar + 92px nav + 34px breathing */
   }
 
+  /* 2×2 grid for metrics on tablet */
+  .hero-metrics-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 24px;
+  }
+
   .hero-grid,
   .intro-grid,
   .app-grid,
@@ -3339,6 +3345,22 @@ h2 span {
 
   .hero-grid {
     gap: 55px;
+  }
+
+  /* ── Metrics bar: 2×2 grid on mobile ── */
+  .hero-metrics-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 20px;
+    padding-top: 20px;
+    margin-top: 8px;
+  }
+
+  .metric-item strong {
+    font-size: 24px;
+  }
+
+  .metric-item > span {
+    font-size: 10.5px;
   }
 
   h1 {
