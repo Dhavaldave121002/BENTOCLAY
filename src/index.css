@@ -2028,7 +2028,7 @@ h2 span {
 
 /* Standalone / Subpage Styles */
 .page-hero {
-  padding: 142px 0 96px;
+  padding: 182px 0 96px; /* 40px topbar + 92px nav + 50px room */
   background: linear-gradient(115deg, #fffdf9 67%, #f1e5d7 67%);
   position: relative;
   overflow: hidden;
@@ -3205,6 +3205,7 @@ h2 span {
 
   .hero {
     background: linear-gradient(#fffdf9 60%, #f3e9dc 60%);
+    padding-top: 162px; /* 36px topbar + 92px nav + 34px breathing */
   }
 
   .hero-grid,
@@ -3333,7 +3334,7 @@ h2 span {
   }
 
   .hero {
-    padding: 105px 0 65px;
+    padding: 150px 0 55px; /* 34px topbar + 82px nav + 34px room */
   }
 
   .hero-grid {
@@ -3517,7 +3518,7 @@ h2 span {
   }
 
   .page-hero {
-    padding: 110px 0 75px;
+    padding: 150px 0 75px; /* 36px topbar + 82px nav + 32px room */
     background: #fffdf9;
   }
 
@@ -3567,11 +3568,11 @@ h2 span {
   }
 
   .contact-hero {
-    padding: 110px 0 60px;
+    padding: 150px 0 60px;
   }
 
   .product-detail-hero {
-    padding: 100px 0 50px;
+    padding: 150px 0 50px;
   }
 
   .contact-hero>.container {
