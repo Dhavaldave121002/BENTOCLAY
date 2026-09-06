@@ -59,8 +59,8 @@ export default function ContactPage() {
               Tell us about your application, required grade or quantity. Our team will connect with you directly.
             </p>
             <div className="direct-details">
-              <a href="mailto:bentoclayclaytech@gmail.com">
-                <small>EMAIL</small>bentoclayclaytech@gmail.com
+              <a href="mailto:bentoclaytech@gmail.com">
+                <small>EMAIL</small>bentoclaytech@gmail.com
               </a>
               <a href="tel:+917435818628">
                 <small>PHONE</small>+91 74358 18628

@@ -3098,10 +3098,10 @@ h2 span {
     display: flex;
   }
 
-  /* ── Mobile nav: 2×2 grid for the 4 nav links ── */
   .nav-links {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     position: absolute;
     top: 100%;
     left: 0;
@@ -3109,8 +3109,8 @@ h2 span {
     background: rgba(255, 253, 249, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    padding: 20px 20px 24px;
-    gap: 10px;
+    padding: 24px 28px 30px;
+    gap: 16px;
     border-bottom: 1px solid rgba(76, 47, 31, 0.12);
     box-shadow: 0 20px 45px rgba(71, 43, 28, 0.14);
 
@@ -3131,54 +3131,33 @@ h2 span {
     pointer-events: auto;
   }
 
-  /* Each nav link card in the 2×2 grid */
   .nav-links>a:not(.nav-cta) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 18px 12px;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: -0.1px;
+    padding: 11px 0;
+    font-size: 17.5px;
+    border-bottom: 1px solid rgba(76, 47, 31, 0.07);
     color: var(--ink);
-    background: rgba(234, 223, 206, 0.35);
-    border: 1px solid rgba(76, 47, 31, 0.09);
-    border-radius: 12px;
-    transition: color 0.2s ease, background 0.2s ease, transform 0.18s ease, box-shadow 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
   }
 
   .nav-links>a:not(.nav-cta):after {
-    display: none; /* hide underline in grid mode */
+    display: none;
   }
 
   .nav-links>a:not(.nav-cta):hover,
   .nav-links>a.active-page {
     color: var(--green);
-    background: rgba(184, 121, 54, 0.1);
-    border-color: rgba(128, 80, 46, 0.25);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(94, 54, 31, 0.12);
+    transform: translateX(4px);
   }
 
-  /* Active page gets a stronger tint */
-  .nav-links>a.active-page {
-    background: rgba(184, 121, 54, 0.13);
-    border-color: rgba(128, 80, 46, 0.3);
-  }
-
-  /* CTA button spans both columns */
   .nav-links>a.nav-cta {
-    grid-column: 1 / -1;
-    margin-top: 4px;
-    padding: 15px 22px;
+    margin-top: 8px;
+    padding: 14px 22px;
     text-align: center;
-    font-size: 15.5px;
-    border-radius: 10px;
+    font-size: 16px;
     box-shadow: 0 4px 14px rgba(94, 54, 31, 0.2);
   }
 
-  /* Stagger smooth entrance animation for grid items */
+  /* Stagger smooth entrance animation for links */
   .nav-links.open>* {
     animation: navItemSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) backwards;
   }
