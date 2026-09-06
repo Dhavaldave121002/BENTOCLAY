@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import TopBar from './TopBar';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +9,6 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Header becomes solid/blurred when scrolled down more than 20px
       setIsScrolled(window.scrollY > 20);
     };
 
@@ -63,9 +63,14 @@ export default function Navbar() {
 
   return (
     <>
+      {/* Top Info Bar */}
+      <TopBar isScrolled={isScrolled} />
+
+      {/* Main Navigation */}
       <header
-        className={`site-header ${isScrolled ? 'scrolled' : 'header-transparent'} ${isOpen ? 'menu-open' : ''}`}
+        className={`site-header ${isScrolled ? 'scrolled' : 'header-transparent'} ${isOpen ? 'menu-open' : ''} ${isScrolled ? 'top-bar-hidden' : ''}`}
         id="top"
+        style={{ top: isScrolled ? '0' : 'var(--topbar-height, 40px)' }}
       >
         <div className="container nav-wrap">
           <Link to="/" className="brand" aria-label="Bentoclay Claytech home" onClick={closeMenu}>
